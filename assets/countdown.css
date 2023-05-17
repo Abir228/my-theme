@@ -1,0 +1,63 @@
+.marquee_content {
+      white-space: nowrap;
+      will-change: transform;
+       
+      animation: marquee 120s linear infinite;
+  
+}
+  @keyframes marquee {
+  0% {
+   transform: translate3d(0, 0, 0);
+   visibility: visible;
+  }
+  100% {
+   transform: translate3d(-100%, 0, 0);
+
+  }
+}
+
+.marquee_content:hover {
+  animation-play-state: paused;
+}
+
+.announcement-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.countdown {
+    
+   display: flex;
+    
+   justify-content: space-around;
+ }
+
+.countdown h3 {
+  font-size: calc(var(--font-heading-scale) * 1.2rem);
+}
+
+.countdown .container{
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown .text {
+  margin : 1rem 0;
+}
+
+h3.day, h3.hour, h3.minute, h3.second{
+   margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 450px ) {
+  .announcement-container{
+   flex-direction: column;
+   
+   justify-content: center;
+  }
+}
